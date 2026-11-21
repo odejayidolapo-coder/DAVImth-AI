@@ -1,0 +1,11 @@
+[
+  {
+    "name": "autonomy-queue-worker",
+    "cron": "0 * * * *",
+    "handler": "autonomyQueueWorker",
+    "timezone": "Africa/Lagos",
+    "payload": {
+      "maxRunsPerInvocation": 1
+    }
+  }
+]
