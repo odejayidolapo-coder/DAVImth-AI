@@ -1,0 +1,139 @@
+[
+  {
+    "name": "Authenticated DAVImth chat and safe session handling",
+    "sanity": true,
+    "viewport": "mobile",
+    "covers": [
+      "sign-in",
+      "fresh conversation after login",
+      "AI chat",
+      "copy assistant response",
+      "sign-out clears active conversation",
+      "chat error and retry feedback",
+      "task-aware DAVImth model intelligence routing"
+    ],
+    "description": "Verifies a returning account can exchange messages, copy a response and sign out without exposing the previous active chat.",
+    "steps": [
+      "Sign in as the test account",
+      "Confirm the chat opens with no previous active messages",
+      "Send a clear question to DAVImth",
+      "Copy the assistant response",
+      "Sign out and sign in again",
+      "Confirm the new session starts with an empty conversation"
+    ],
+    "expected": "The assistant answers the question, its response can be copied, and signing in again starts a new empty conversation."
+  },
+  {
+    "name": "Visitors can use DAVImth chat without signing in",
+    "viewport": "mobile",
+    "covers": [
+      "public visitor access",
+      "guest AI chat",
+      "visitor usage protection"
+    ],
+    "description": "Verifies a signed-out visitor can receive a chat response while server-side usage protection remains in place.",
+    "steps": [
+      "Open DAVImth AI in a fresh signed-out browser session",
+      "Do not sign in",
+      "Send a simple question in the main chat",
+      "Wait for the assistant response"
+    ],
+    "expected": "DAVImth returns a normal answer without requiring sign-in; the visitor remains subject to server-enforced usage limits."
+  },
+  {
+    "name": "Study Buddy teaches, saves and tracks a learner's progress",
+    "viewport": "desktop",
+    "covers": [
+      "Study Buddy navigation",
+      "subject and level selection",
+      "fresh topic conversations",
+      "patient AI tutor response",
+      "cloud-saved lesson history",
+      "resume a saved lesson",
+      "per-user study data isolation",
+      "mark lesson complete",
+      "record quiz score",
+      "invalid quiz score validation",
+      "image upload",
+      "PDF text extraction",
+      "video keyframe analysis",
+      "voice recording attachment",
+      "microphone permission feedback",
+      "study AI failure feedback"
+    ],
+    "description": "Checks the core Study Buddy learning workflow, multimodal study inputs, saved lessons and learner progress from one account.",
+    "steps": [
+      "Sign in and open AI Study Buddy",
+      "Choose Python Programming and Beginner level",
+      "Set the topic to Variables and ask the tutor to explain variables",
+      "Wait for the tutor reply and confirm the lesson is saved",
+      "Refresh and reopen the saved lesson from history",
+      "Attach a readable PDF and an image and ask the tutor to explain them",
+      "Attach a short MP4 or WebM video and ask what happens in it",
+      "Confirm sampled video frames are included in the tutor request",
+      "Try a voice recording or voice conversation and allow microphone access",
+      "Enter an invalid quiz score greater than the total and confirm validation",
+      "Record a valid quiz score of 8 out of 10",
+      "Mark the lesson complete and confirm progress updates",
+      "Sign out and confirm personal saved lessons are not displayed"
+    ],
+    "expected": "The tutor explains at the selected level, readable documents and images are analysed, sampled video keyframes reach the tutor, voice controls provide clear permission feedback, and lesson history plus completion and quiz progress are saved privately to the signed-in account."
+  },
+  {
+    "name": "Administrator uses the premium virtual classroom",
+    "viewport": "desktop",
+    "covers": [
+      "server-verified administrator entitlement",
+      "premium classroom unlocked for admin",
+      "virtual classroom preview",
+      "whiteboard lesson",
+      "browser voice conversation",
+      "free unlimited administrator access",
+      "voice selection and speech speed",
+      "teacher appearance image generation",
+      "AI chart and lesson graphic"
+    ],
+    "description": "Verifies the administrator can use the premium classroom and its visual learning tools without a subscription charge or app-level usage limit.",
+    "steps": [
+      "Sign in as the configured DAVImth administrator",
+      "Open AI Study Buddy and confirm Administrator all-access is shown",
+      "Open Premium AI Classroom",
+      "Choose a speaking voice and language and adjust speaking speed",
+      "Choose a teacher appearance and create a realistic teacher portrait",
+      "Create an AI chart or graphic for the selected topic",
+      "Start a classroom lesson and test voice conversation"
+    ],
+    "expected": "The administrator can use browser voice choices, language and speed settings, AI-generated teacher and lesson graphics, and a tutor-led whiteboard lesson without app-level rate limits; provider-level capacity limits may still apply."
+  },
+  {
+    "name": "Preserve the other DAVImth workspaces and Autonomous Intelligence",
+    "viewport": "mobile",
+    "covers": [
+      "Business Hub",
+      "private workspace authentication",
+      "AI Customer Support",
+      "support assistant persistence",
+      "Social and Marketing Hub",
+      "AI image creator",
+      "Video Studio",
+      "authenticated goal planning",
+      "task approval gate",
+      "durable cloud queue",
+      "scheduled background worker",
+      "owner-only cancellation",
+      "no external side effects"
+    ],
+    "description": "Confirms the Study Buddy release preserves the existing business and creative workspaces and the approved autonomous task queue.",
+    "steps": [
+      "Sign in and open Business Hub",
+      "Open AI Customer Support and view the saved assistant list",
+      "Open Social and Marketing",
+      "Open Image Creator and Video Studio",
+      "Open Autonomous Intelligence",
+      "Create a goal and approve one task",
+      "Queue the approved task, confirm Queued, then cancel it",
+      "Refresh and confirm the task remains Cancelled"
+    ],
+    "expected": "Existing workspaces remain reachable with their saved owner data, and approved autonomy tasks retain their private queue, approval and cancellation protections."
+  }
+]
