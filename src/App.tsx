@@ -1,7 +1,8 @@
 import { FormEvent, useEffect, useMemo, useRef, useState } from 'react';
 import AutonomyCenter from './AutonomyCenter';
 import { api } from './lib/api';
-import { auth, image } from '@appdeploy/client';
+import { auth } from '@appdeploy/client';
+import { image } from './lib/image';
 import * as pdfjsLib from 'pdfjs-dist';
 import * as mammoth from 'mammoth';
 
