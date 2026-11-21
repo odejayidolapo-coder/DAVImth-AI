@@ -1,5 +1,5 @@
 import { FormEvent, useEffect, useState } from 'react';
-import { api } from '@appdeploy/client';
+import { api } from './lib/api';
 import { BrainCircuit, Check, Clock3, FileText, LockKeyhole, Plus, RefreshCw, ShieldCheck, Sparkles, X, PlayCircle } from 'lucide-react';
 
 type User = { userId: string; email?: string; name?: string };
